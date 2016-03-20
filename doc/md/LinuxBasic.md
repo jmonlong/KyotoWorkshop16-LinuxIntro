@@ -28,7 +28,7 @@
 
 ## Try some commands
 
-~~~
+~~~sh
 > ls
 > echo Hello
 > man echo
@@ -84,7 +84,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Solution
 
-~~~
+~~~sh
 > cd ~/Documents
 > mkdir workshop
 > cd workshop
@@ -97,7 +97,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 - `cp` **C**o**P**y a file.
 - `mv` **M**o**V**e a file.
 
-~~~
+~~~sh
 > cp file1 file2
 > rm file1
 > mv file2 file3
@@ -112,7 +112,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Solution
 
-~~~
+~~~sh
 > cd ~/Downloads
 > wget LINK
 > cp FILE ../Documents/workshop/linux
@@ -137,7 +137,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Solution
 
-~~~
+~~~sh
 > cd ~/Documents/workshop/linux
 > head FILE
 > less FILE
@@ -161,7 +161,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 - Using `|`.
 - More than two commands can be piped.
 
-~~~
+~~~sh
 zcat bigFile.gz | grep GENE
 zcat bigFile.gz | grep GENE | head 
 ~~~
