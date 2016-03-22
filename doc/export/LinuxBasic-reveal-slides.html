@@ -188,12 +188,12 @@ Documents  Dowloads  Pictures
 &gt; cd Documents/workshop</code></pre>
 </section><section id="exercise" class="slide level2">
 <h2><span class="header-section-number">3.3</span> Exercise</h2>
-<ul>
+<ol type="1">
 <li>Go to your <code>Documents</code> folder.</li>
 <li>Create a directory <code>workshop</code>.</li>
 <li>Go to the <code>workshop</code> folder.</li>
 <li>Create a directory <code>linux</code>.</li>
-</ul>
+</ol>
 <p><br /> Note: <code>mkdir</code> to <strong>M</strong>a<strong>K</strong>e a <strong>DIR</strong>ectory.</p>
 </section><section id="solution" class="slide level2">
 <h2><span class="header-section-number">3.4</span> Solution</h2>
@@ -213,18 +213,23 @@ Documents  Dowloads  Pictures
 &gt; mv file2 file3</code></pre>
 </section><section id="exercise-1" class="slide level2">
 <h2><span class="header-section-number">3.6</span> Exercise</h2>
-<ul>
+<ol type="1">
 <li>Move to your <code>Downloads</code> folder.</li>
-<li>Download an annotation file using <code>wget LINK</code>.</li>
+<li>Download the annotation file located at <a href="https://goo.gl/FLGAZH" class="uri">https://goo.gl/FLGAZH</a>.</li>
 <li>Copy the file to the <code>linux</code> folder.</li>
 <li>Remove the file in the <code>Downloads</code> folder.</li>
-</ul>
+<li>Rename the file as <code>gencode.gtf</code> (using <code>mv</code> command)</li>
+</ol>
+<p><br /> Note: To download the file you can use:</p>
+<pre class="sh"><code>&gt; wget https://goo.gl/FLGAZH</code></pre>
 </section><section id="solution-1" class="slide level2">
 <h2><span class="header-section-number">3.7</span> Solution</h2>
 <pre class="sh"><code>&gt; cd ~/Downloads
-&gt; wget LINK
-&gt; cp gencode.v24.basic.annotation.top1k.gtf ../Documents/workshop/linux
-&gt; rm gencode.v24.basic.annotation.top1k.gtf</code></pre>
+&gt; wget https://goo.gl/FLGAZH
+&gt; cp FLGAZH ../Documents/workshop/linux
+&gt; rm FLGAZH
+&gt; cd ../Documents/workshop/linux
+&gt; mv FLGAZH gencode.gtf</code></pre>
 </section></section>
 <section><section id="text-files" class="titleslide slide level1"><h1><span class="header-section-number">4</span> Text files</h1></section><section id="commands" class="slide level2">
 <h2><span class="header-section-number">4.1</span> Commands</h2>
@@ -238,19 +243,19 @@ Documents  Dowloads  Pictures
 </ul>
 </section><section id="exercise-2" class="slide level2">
 <h2><span class="header-section-number">4.2</span> Exercise</h2>
-<ul>
+<ol type="1">
 <li>Print the first lines of the annotation file.</li>
 <li>Explore the file using <code>less</code>.</li>
 <li>How many lines are in the file ?</li>
 <li>Find the lines containing <em>ENSG00000278267</em>.</li>
-</ul>
+</ol>
 </section><section id="solution-2" class="slide level2">
 <h2><span class="header-section-number">4.3</span> Solution</h2>
 <pre class="sh"><code>&gt; cd ~/Documents/workshop/linux
-&gt; head gencode.v24.basic.annotation.top1k.gtf
-&gt; less gencode.v24.basic.annotation.top1k.gtf
-&gt; wc gencode.v24.basic.annotation.top1k.gtf
-&gt; grep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf</code></pre>
+&gt; head gencode.gtf
+&gt; less gencode.gtf
+&gt; wc gencode.gtf
+&gt; grep ENSG00000278267 gencode.gtf</code></pre>
 </section></section>
 <section><section id="compression" class="titleslide slide level1"><h1><span class="header-section-number">5</span> Compression</h1></section><section id="commands-1" class="slide level2">
 <h2><span class="header-section-number">5.1</span> Commands</h2>
@@ -262,9 +267,9 @@ Documents  Dowloads  Pictures
 </ul>
 </section><section id="example" class="slide level2">
 <h2><span class="header-section-number">5.2</span> Example</h2>
-<pre class="sh"><code>&gt; gzip gencode.v24.basic.annotation.top1k.gtf
-&gt; zgrep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf.gz
-&gt; gunzip gencode.v24.basic.annotation.top1k.gtf.gz
+<pre class="sh"><code>&gt; gzip gencode.gtf
+&gt; zgrep ENSG00000278267 gencode.gtf.gz
+&gt; gunzip gencode.gtf.gz
 &gt; tar -xzvf archive.tar.gz</code></pre>
 </section></section>
 <section><section id="pipes" class="titleslide slide level1"><h1><span class="header-section-number">6</span> Pipes</h1></section><section id="pipes-1" class="slide level2">

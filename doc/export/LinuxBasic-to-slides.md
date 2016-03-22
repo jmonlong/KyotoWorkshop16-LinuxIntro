@@ -73,10 +73,10 @@ Documents  Dowloads  Pictures
 
 ## Exercise
 
-- Go to your `Documents` folder.
-- Create a directory `workshop`.
-- Go to the `workshop` folder.
-- Create a directory `linux`.
+1. Go to your `Documents` folder.
+1. Create a directory `workshop`.
+1. Go to the `workshop` folder.
+1. Create a directory `linux`.
 
 \
 
@@ -105,18 +105,29 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Exercise
 
-- Move to your `Downloads` folder.
-- Download an annotation file using `wget LINK`.
-- Copy the file to the `linux` folder.
-- Remove the file in the `Downloads` folder.
+1. Move to your `Downloads` folder.
+1. Download the annotation file located at [https://goo.gl/FLGAZH](https://goo.gl/FLGAZH).
+1. Copy the file to the `linux` folder.
+1. Remove the file in the `Downloads` folder.
+1. Rename the file as `gencode.gtf` (using `mv` command)
+
+\
+
+Note: To download the file you can use:
+
+~~~sh
+> wget https://goo.gl/FLGAZH
+~~~
 
 ## Solution
 
 ~~~sh
 > cd ~/Downloads
-> wget LINK
-> cp gencode.v24.basic.annotation.top1k.gtf ../Documents/workshop/linux
-> rm gencode.v24.basic.annotation.top1k.gtf
+> wget https://goo.gl/FLGAZH
+> cp FLGAZH ../Documents/workshop/linux
+> rm FLGAZH
+> cd ../Documents/workshop/linux
+> mv FLGAZH gencode.gtf
 ~~~
 
 # Text files
@@ -132,19 +143,19 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Exercise
 
-- Print the first lines of the annotation file.
-- Explore the file using `less`.
-- How many lines are in the file ?
-- Find the lines containing *ENSG00000278267*.
+1. Print the first lines of the annotation file.
+1. Explore the file using `less`.
+1. How many lines are in the file ?
+1. Find the lines containing *ENSG00000278267*.
 
 ## Solution
 
 ~~~sh
 > cd ~/Documents/workshop/linux
-> head gencode.v24.basic.annotation.top1k.gtf
-> less gencode.v24.basic.annotation.top1k.gtf
-> wc gencode.v24.basic.annotation.top1k.gtf
-> grep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf
+> head gencode.gtf
+> less gencode.gtf
+> wc gencode.gtf
+> grep ENSG00000278267 gencode.gtf
 ~~~
 
 # Compression
@@ -159,9 +170,9 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 ## Example
 
 ~~~sh
-> gzip gencode.v24.basic.annotation.top1k.gtf
-> zgrep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf.gz
-> gunzip gencode.v24.basic.annotation.top1k.gtf.gz
+> gzip gencode.gtf
+> zgrep ENSG00000278267 gencode.gtf.gz
+> gunzip gencode.gtf.gz
 > tar -xzvf archive.tar.gz
 ~~~
 
