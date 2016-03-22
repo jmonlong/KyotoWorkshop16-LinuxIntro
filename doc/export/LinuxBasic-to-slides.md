@@ -2,20 +2,20 @@
 % Jean Monlong
 % 29 March 2016
 
-# What is Linux ?
+# Introduction
 
-## Linux
+## What is Linux ?
 
 - Free **operating system** for computers, similar to Unix (proprietary).
-- Many bioinformatics programs run on Linux.
-- Leading operating system on supercomputers and servers.
+- **Many bioinformatics programs** run on Linux.
+- Leading operating system on **supercomputers and servers**.
 
 ## Why is it good ?
 
-- Powerful and flexible.
-- Command-line instructions can easily:
-	- Explore big files.
-	- Combined for custom analysis.
+- **Command-line** instructions.
+- Work with **big files** easily.
+- **Easier to develop** and run specific tools.
+- Write **custom analysis** (scripting).
 	
 # What is a command ?
 
@@ -28,7 +28,7 @@
 
 ## Try some commands
 
-~~~
+~~~sh
 > ls
 > echo Hello
 > man echo
@@ -84,7 +84,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Solution
 
-~~~
+~~~sh
 > cd ~/Documents
 > mkdir workshop
 > cd workshop
@@ -97,7 +97,7 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 - `cp` **C**o**P**y a file.
 - `mv` **M**o**V**e a file.
 
-~~~
+~~~sh
 > cp file1 file2
 > rm file1
 > mv file2 file3
@@ -112,11 +112,11 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 
 ## Solution
 
-~~~
+~~~sh
 > cd ~/Downloads
 > wget LINK
-> cp FILE ../Documents/workshop/linux
-> rm FILE
+> cp gencode.v24.basic.annotation.top1k.gtf ../Documents/workshop/linux
+> rm gencode.v24.basic.annotation.top1k.gtf
 ~~~
 
 # Text files
@@ -128,20 +128,23 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 - `less` to explore the text file.
 - `nano` is a text editor. To open, change and save a file.
 - `grep` retrieves lines containing a word or expression.
+- `wc` retrieves the **W**ord **C**ount as well as the number of lines in a file.
 
 ## Exercise
 
 - Print the first lines of the annotation file.
 - Explore the file using `less`.
-- Find the lines containing *GENE*.
+- How many lines are in the file ?
+- Find the lines containing *ENSG00000278267*.
 
 ## Solution
 
-~~~
+~~~sh
 > cd ~/Documents/workshop/linux
-> head FILE
-> less FILE
-> grep GENE FILE
+> head gencode.v24.basic.annotation.top1k.gtf
+> less gencode.v24.basic.annotation.top1k.gtf
+> wc gencode.v24.basic.annotation.top1k.gtf
+> grep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf
 ~~~
 
 # Compression
@@ -149,9 +152,18 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 ## Commands
 
 - `gzip` to compress a file.
-- `gunzip` to secompress a `.gz` file.
+- `gunzip` to decompress a `.gz` file.
 - `tar -xzvf file.tar.gz` to decompress and extract a `.tar.gz` file.
-- zless, zcat, zgrep
+- `zless`/`zcat`/`zgrep` are `less`/`cat`/`grep` directly on gzip files.
+
+## Example
+
+~~~sh
+> gzip gencode.v24.basic.annotation.top1k.gtf
+> zgrep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf.gz
+> gunzip gencode.v24.basic.annotation.top1k.gtf.gz
+> tar -xzvf archive.tar.gz
+~~~
 
 # Pipes
 
@@ -161,19 +173,26 @@ Note: `mkdir` to **M**a**K**e a **DIR**ectory.
 - Using `|`.
 - More than two commands can be piped.
 
-~~~
-zcat bigFile.gz | grep GENE
-zcat bigFile.gz | grep GENE | head 
+~~~sh
+> zcat bigFile.gz | grep ENSG00000278267
+> zcat bigFile.gz | grep ENSG00000278267 | head 
+> zcat bigFile.gz | grep ENSG00000278267 | less
 ~~~
 
+## Output redirection
 
+- Instead of printing the results of a command.
+- Use `>` to redirect it to a file.
+
+~~~sh
+> zcat bigFile.gz | grep ENSG00000278267 | head > gene1.gtf
+~~~
 
 # What's next ?
 
 ## What's next ?
 
-- ssh and scp.
+- `ssh` and `scp`.
 - `*` wildcard.
-- Piping, Input/Output redirection.
 - Scripting.
 - Custom batch profile (`.bachrc` file).

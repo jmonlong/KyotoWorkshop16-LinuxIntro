@@ -119,22 +119,20 @@
 </section>
 <!--  -->
 
-<section><section id="what-is-linux" class="titleslide slide level1"><h1><span class="header-section-number">1</span> What is Linux ?</h1></section><section id="linux" class="slide level2">
-<h2><span class="header-section-number">1.1</span> Linux</h2>
+<section><section id="introduction" class="titleslide slide level1"><h1><span class="header-section-number">1</span> Introduction</h1></section><section id="what-is-linux" class="slide level2">
+<h2><span class="header-section-number">1.1</span> What is Linux ?</h2>
 <ul>
 <li>Free <strong>operating system</strong> for computers, similar to Unix (proprietary).</li>
-<li>Many bioinformatics programs run on Linux.</li>
-<li>Leading operating system on supercomputers and servers.</li>
+<li><strong>Many bioinformatics programs</strong> run on Linux.</li>
+<li>Leading operating system on <strong>supercomputers and servers</strong>.</li>
 </ul>
 </section><section id="why-is-it-good" class="slide level2">
 <h2><span class="header-section-number">1.2</span> Why is it good ?</h2>
 <ul>
-<li>Powerful and flexible.</li>
-<li>Command-line instructions can easily:
-<ul>
-<li>Explore big files.</li>
-<li>Combined for custom analysis.</li>
-</ul></li>
+<li><strong>Command-line</strong> instructions.</li>
+<li>Work with <strong>big files</strong> easily.</li>
+<li><strong>Easier to develop</strong> and run specific tools.</li>
+<li>Write <strong>custom analysis</strong> (scripting).</li>
 </ul>
 </section></section>
 <section><section id="what-is-a-command" class="titleslide slide level1"><h1><span class="header-section-number">2</span> What is a command ?</h1></section><section id="the-terminal" class="slide level2">
@@ -147,7 +145,7 @@
 </ul>
 </section><section id="try-some-commands" class="slide level2">
 <h2><span class="header-section-number">2.2</span> Try some commands</h2>
-<pre><code>&gt; ls
+<pre class="sh"><code>&gt; ls
 &gt; echo Hello
 &gt; man echo</code></pre>
 <ul>
@@ -199,7 +197,7 @@ Documents  Dowloads  Pictures
 <p><br /> Note: <code>mkdir</code> to <strong>M</strong>a<strong>K</strong>e a <strong>DIR</strong>ectory.</p>
 </section><section id="solution" class="slide level2">
 <h2><span class="header-section-number">3.4</span> Solution</h2>
-<pre><code>&gt; cd ~/Documents
+<pre class="sh"><code>&gt; cd ~/Documents
 &gt; mkdir workshop
 &gt; cd workshop
 &gt; mkdir linux</code></pre>
@@ -210,7 +208,7 @@ Documents  Dowloads  Pictures
 <li><code>cp</code> <strong>C</strong>o<strong>P</strong>y a file.</li>
 <li><code>mv</code> <strong>M</strong>o<strong>V</strong>e a file.</li>
 </ul>
-<pre><code>&gt; cp file1 file2
+<pre class="sh"><code>&gt; cp file1 file2
 &gt; rm file1
 &gt; mv file2 file3</code></pre>
 </section><section id="exercise-1" class="slide level2">
@@ -223,10 +221,10 @@ Documents  Dowloads  Pictures
 </ul>
 </section><section id="solution-1" class="slide level2">
 <h2><span class="header-section-number">3.7</span> Solution</h2>
-<pre><code>&gt; cd ~/Downloads
+<pre class="sh"><code>&gt; cd ~/Downloads
 &gt; wget LINK
-&gt; cp FILE ../Documents/workshop/linux
-&gt; rm FILE</code></pre>
+&gt; cp gencode.v24.basic.annotation.top1k.gtf ../Documents/workshop/linux
+&gt; rm gencode.v24.basic.annotation.top1k.gtf</code></pre>
 </section></section>
 <section><section id="text-files" class="titleslide slide level1"><h1><span class="header-section-number">4</span> Text files</h1></section><section id="commands" class="slide level2">
 <h2><span class="header-section-number">4.1</span> Commands</h2>
@@ -236,29 +234,38 @@ Documents  Dowloads  Pictures
 <li><code>less</code> to explore the text file.</li>
 <li><code>nano</code> is a text editor. To open, change and save a file.</li>
 <li><code>grep</code> retrieves lines containing a word or expression.</li>
+<li><code>wc</code> retrieves the <strong>W</strong>ord <strong>C</strong>ount as well as the number of lines in a file.</li>
 </ul>
 </section><section id="exercise-2" class="slide level2">
 <h2><span class="header-section-number">4.2</span> Exercise</h2>
 <ul>
 <li>Print the first lines of the annotation file.</li>
 <li>Explore the file using <code>less</code>.</li>
-<li>Find the lines containing <em>GENE</em>.</li>
+<li>How many lines are in the file ?</li>
+<li>Find the lines containing <em>ENSG00000278267</em>.</li>
 </ul>
 </section><section id="solution-2" class="slide level2">
 <h2><span class="header-section-number">4.3</span> Solution</h2>
-<pre><code>&gt; cd ~/Documents/workshop/linux
-&gt; head FILE
-&gt; less FILE
-&gt; grep GENE FILE</code></pre>
+<pre class="sh"><code>&gt; cd ~/Documents/workshop/linux
+&gt; head gencode.v24.basic.annotation.top1k.gtf
+&gt; less gencode.v24.basic.annotation.top1k.gtf
+&gt; wc gencode.v24.basic.annotation.top1k.gtf
+&gt; grep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf</code></pre>
 </section></section>
 <section><section id="compression" class="titleslide slide level1"><h1><span class="header-section-number">5</span> Compression</h1></section><section id="commands-1" class="slide level2">
 <h2><span class="header-section-number">5.1</span> Commands</h2>
 <ul>
 <li><code>gzip</code> to compress a file.</li>
-<li><code>gunzip</code> to secompress a <code>.gz</code> file.</li>
+<li><code>gunzip</code> to decompress a <code>.gz</code> file.</li>
 <li><code>tar -xzvf file.tar.gz</code> to decompress and extract a <code>.tar.gz</code> file.</li>
-<li>zless, zcat, zgrep</li>
+<li><code>zless</code>/<code>zcat</code>/<code>zgrep</code> are <code>less</code>/<code>cat</code>/<code>grep</code> directly on gzip files.</li>
 </ul>
+</section><section id="example" class="slide level2">
+<h2><span class="header-section-number">5.2</span> Example</h2>
+<pre class="sh"><code>&gt; gzip gencode.v24.basic.annotation.top1k.gtf
+&gt; zgrep ENSG00000278267 gencode.v24.basic.annotation.top1k.gtf.gz
+&gt; gunzip gencode.v24.basic.annotation.top1k.gtf.gz
+&gt; tar -xzvf archive.tar.gz</code></pre>
 </section></section>
 <section><section id="pipes" class="titleslide slide level1"><h1><span class="header-section-number">6</span> Pipes</h1></section><section id="pipes-1" class="slide level2">
 <h2><span class="header-section-number">6.1</span> Pipes</h2>
@@ -267,15 +274,22 @@ Documents  Dowloads  Pictures
 <li>Using <code>|</code>.</li>
 <li>More than two commands can be piped.</li>
 </ul>
-<pre><code>zcat bigFile.gz | grep GENE
-zcat bigFile.gz | grep GENE | head </code></pre>
+<pre class="sh"><code>&gt; zcat bigFile.gz | grep ENSG00000278267
+&gt; zcat bigFile.gz | grep ENSG00000278267 | head 
+&gt; zcat bigFile.gz | grep ENSG00000278267 | less</code></pre>
+</section><section id="output-redirection" class="slide level2">
+<h2><span class="header-section-number">6.2</span> Output redirection</h2>
+<ul>
+<li>Instead of printing the results of a command.</li>
+<li>Use <code>&gt;</code> to redirect it to a file.</li>
+</ul>
+<pre class="sh"><code>&gt; zcat bigFile.gz | grep ENSG00000278267 | head &gt; gene1.gtf</code></pre>
 </section></section>
 <section><section id="whats-next" class="titleslide slide level1"><h1><span class="header-section-number">7</span> What's next ?</h1></section><section id="whats-next-1" class="slide level2">
 <h2><span class="header-section-number">7.1</span> What's next ?</h2>
 <ul>
-<li>ssh and scp.</li>
+<li><code>ssh</code> and <code>scp</code>.</li>
 <li><code>*</code> wildcard.</li>
-<li>Piping, Input/Output redirection.</li>
 <li>Scripting.</li>
 <li>Custom batch profile (<code>.bachrc</code> file).</li>
 </ul>
