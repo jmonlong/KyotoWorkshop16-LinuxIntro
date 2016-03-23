@@ -14,7 +14,7 @@
    viewBox="0 0 970.86621 655.51173"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="unixFileSystem.svg">
   <defs
      id="defs4">
@@ -146,16 +146,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="422.84993"
-     inkscape:cy="336.0369"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="534.83411"
+     inkscape:cy="331.24755"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="851"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
      inkscape:window-x="0"
-     inkscape:window-y="1"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -165,7 +165,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -260,8 +260,8 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4178"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(231.42858,606.73879)"><flowRegion
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
+       transform="translate(407.19514,781.49519)"><flowRegion
          id="flowRegion4180"><rect
            id="rect4182"
            width="244.28571"
@@ -269,26 +269,7 @@
            x="45.714287"
            y="180.93364"
            style="font-size:40px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara4184">Documents</flowPara></flowRoot>    <rect
-       y="783.59521"
-       x="585.41638"
-       height="62.444973"
-       width="246.5799"
-       id="rect4186"
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3.18448448;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <flowRoot
-       transform="translate(538.85716,606.73879)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="flowRoot4188"
-       xml:space="preserve"><flowRegion
-         id="flowRegion4190"><rect
-           style="font-size:40px;text-align:center;text-anchor:middle"
-           y="180.93364"
-           x="45.714287"
-           height="51.428558"
-           width="249.99998"
-           id="rect4192" /></flowRegion><flowPara
-         id="flowPara4194">Downloads</flowPara></flowRoot>    <rect
+         id="flowPara4184">linux</flowPara></flowRoot>    <rect
        y="957.7887"
        x="155.03842"
        height="62.629459"
@@ -296,8 +277,8 @@
        id="rect4206"
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <flowRoot
-       transform="translate(108.57145,781.0245)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(246.96236,604.24779)"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
        id="flowRoot4208"
        xml:space="preserve"><flowRegion
          id="flowRegion4210"><rect
@@ -317,8 +298,8 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4218"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(420.00002,781.0245)"><flowRegion
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
+       transform="translate(109.88317,781.0245)"><flowRegion
          id="flowRegion4220"><rect
            id="rect4222"
            width="215.71426"
@@ -326,7 +307,7 @@
            x="45.714287"
            y="180.93364"
            style="font-size:40px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara4224">projects</flowPara></flowRoot>    <path
+         id="flowPara4224">raw_reads</flowPara></flowRoot>    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 241.42857,446.79894 211.42857,0 0,37.14286"
        id="path4254"
@@ -348,11 +329,6 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 409.79715,746.77101 301.02546,0 0,36.87057"
-       id="path4262"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 410.06501,845.28382 0,56.56854 -167.68532,0 0,55.05331"
        id="path4264"
        inkscape:connector-curvature="0" />
@@ -369,12 +345,17 @@
     <path
        inkscape:connector-curvature="0"
        id="path4272"
-       d="m 705.35715,746.79078 210.71428,0"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:0;stroke-opacity:1" />
+       d="m 410.98958,746.79078 210.71428,0"
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:19.89999962;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInS)"
        d="m 171.66901,670.54774 -90.408651,0"
        id="path4278"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       d="m 574.98114,901.84636 210.71428,0"
+       id="path3048"
        inkscape:connector-curvature="0" />
   </g>
 </svg>

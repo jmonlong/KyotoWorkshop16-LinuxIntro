@@ -141,8 +141,17 @@
 <li>A command looks like this: <code>commandName arg1 arg2</code></li>
 <li>Press <em>Enter</em> to run a command.</li>
 </ul>
+</section><section id="example-login-through-ssh" class="slide level2">
+<h2><span class="header-section-number">2.2</span> Example: Login through SSH</h2>
+<ul>
+<li><code>ssh</code> stands for <strong>S</strong>ecure<strong>SH</strong>ell.</li>
+<li>To connect securely to a server.</li>
+<li>The address to connect to looks like : <code>&lt;username&gt;@&lt;server&gt;</code></li>
+</ul>
+<pre class="sh"><code>&gt; ssh jmonlong@www.genome.med.kyoto-u.ac.jp</code></pre>
+<p><strong>Exercise:</strong> Connect to the server (using your username).</p>
 </section><section id="try-some-commands" class="slide level2">
-<h2><span class="header-section-number">2.2</span> Try some commands</h2>
+<h2><span class="header-section-number">2.3</span> Try some commands</h2>
 <pre class="sh"><code>&gt; ls
 &gt; echo Hello
 &gt; man echo</code></pre>
@@ -151,7 +160,7 @@
 <li><code>man</code> open the <strong>MAN</strong>ual of a command. Useful to find details on arguments. Quit by pressing <code>q</code>.</li>
 </ul>
 </section><section id="tips" class="slide level2">
-<h2><span class="header-section-number">2.3</span> Tips</h2>
+<h2><span class="header-section-number">2.4</span> Tips</h2>
 <ul>
 <li>Press <strong>Tab</strong> to auto-complete commands or paths.</li>
 <li><strong>Up/Down arrows</strong> to navigate through previous commands.</li>
@@ -178,27 +187,29 @@
 <pre class="sh"><code>&gt; pwd
 /home/jmonlong
 &gt; ls
-Documents  Dowloads  Pictures
-&gt; cd Documents
+workshop
+&gt; cd workshop
 &gt; pwd
-/home/jmonlong/Documents
+/home/jmonlong/workshop
 &gt; cd ..
-&gt; cd Documents/workshop</code></pre>
+&gt; cd workshop/linux</code></pre>
 </section><section id="exercise" class="slide level2">
 <h2><span class="header-section-number">3.3</span> Exercise</h2>
 <ol type="1">
-<li>Go to your <code>Documents</code> folder.</li>
+<li>Print the working directory</li>
 <li>Create a directory <code>workshop</code>.</li>
 <li>Go to the <code>workshop</code> folder.</li>
 <li>Create a directory <code>linux</code>.</li>
+<li>Go back to your root folder.</li>
 </ol>
 <p><br /> Note: <code>mkdir</code> to <strong>M</strong>a<strong>K</strong>e a <strong>DIR</strong>ectory.</p>
 </section><section id="solution" class="slide level2">
 <h2><span class="header-section-number">3.4</span> Solution</h2>
-<pre class="sh"><code>&gt; cd ~/Documents
+<pre class="sh"><code>&gt; pwd
 &gt; mkdir workshop
 &gt; cd workshop
-&gt; mkdir linux</code></pre>
+&gt; mkdir linux
+&gt; cd ..</code></pre>
 </section><section id="manipulate-files" class="slide level2">
 <h2><span class="header-section-number">3.5</span> Manipulate files</h2>
 <ul>
@@ -212,21 +223,20 @@ Documents  Dowloads  Pictures
 </section><section id="exercise-1" class="slide level2">
 <h2><span class="header-section-number">3.6</span> Exercise</h2>
 <ol type="1">
-<li>Move to your <code>Downloads</code> folder.</li>
-<li>Download the annotation file located at <a href="https://goo.gl/FLGAZH" class="uri">https://goo.gl/FLGAZH</a>.</li>
+<li>Download the annotation file located at <a href="https://goo.gl/FLGAZH">https://goo.gl/FLGAZH</a>.</li>
 <li>Copy the file to the <code>linux</code> folder.</li>
-<li>Remove the file in the <code>Downloads</code> folder.</li>
+<li>Remove the file in the root folder.</li>
+<li>Go to the <code>linux</code> folder.</li>
 <li>Rename the file as <code>gencode.gtf</code> (using <code>mv</code> command)</li>
 </ol>
 <p><br /> Note: To download the file you can use:</p>
 <pre class="sh"><code>&gt; wget https://goo.gl/FLGAZH</code></pre>
 </section><section id="solution-1" class="slide level2">
 <h2><span class="header-section-number">3.7</span> Solution</h2>
-<pre class="sh"><code>&gt; cd ~/Downloads
-&gt; wget https://goo.gl/FLGAZH
-&gt; cp FLGAZH ../Documents/workshop/linux
+<pre class="sh"><code>&gt; wget https://goo.gl/FLGAZH
+&gt; cp FLGAZH workshop/linux
 &gt; rm FLGAZH
-&gt; cd ../Documents/workshop/linux
+&gt; cd workshop/linux
 &gt; mv FLGAZH gencode.gtf</code></pre>
 </section></section>
 <section><section id="text-files" class="titleslide slide level1"><h1><span class="header-section-number">4</span> Text files</h1></section><section id="commands" class="slide level2">
@@ -243,15 +253,16 @@ Documents  Dowloads  Pictures
 <h2><span class="header-section-number">4.2</span> Exercise</h2>
 <ol type="1">
 <li>Print the first lines of the annotation file.</li>
-<li>Explore the file using <code>less</code>.</li>
+<li>Explore the file using <code>less</code>. Try using <code>-S</code> argument.</li>
 <li>How many lines are in the file ?</li>
 <li>Find the lines containing <em>ENSG00000278267</em>.</li>
 </ol>
 </section><section id="solution-2" class="slide level2">
 <h2><span class="header-section-number">4.3</span> Solution</h2>
-<pre class="sh"><code>&gt; cd ~/Documents/workshop/linux
+<pre class="sh"><code>&gt; cd ~/workshop/linux
 &gt; head gencode.gtf
 &gt; less gencode.gtf
+&gt; less -S gencode.gtf
 &gt; wc gencode.gtf
 &gt; grep ENSG00000278267 gencode.gtf</code></pre>
 </section></section>
@@ -260,8 +271,8 @@ Documents  Dowloads  Pictures
 <ul>
 <li><code>gzip</code> to compress a file.</li>
 <li><code>gunzip</code> to decompress a <code>.gz</code> file.</li>
-<li><code>tar -xzvf file.tar.gz</code> to decompress and extract a <code>.tar.gz</code> file.</li>
 <li><code>zless</code>/<code>zcat</code>/<code>zgrep</code> are <code>less</code>/<code>cat</code>/<code>grep</code> directly on gzip files.</li>
+<li><code>tar -xzvf file.tar.gz</code> to decompress and extract a <code>.tar.gz</code> file.</li>
 </ul>
 </section><section id="example" class="slide level2">
 <h2><span class="header-section-number">5.2</span> Example</h2>
@@ -277,25 +288,40 @@ Documents  Dowloads  Pictures
 <li>Using <code>|</code>.</li>
 <li>More than two commands can be piped.</li>
 </ul>
-<pre class="sh"><code>&gt; zcat bigFile.gz | grep ENSG00000278267
-&gt; zcat bigFile.gz | grep ENSG00000278267 | head 
-&gt; zcat bigFile.gz | grep ENSG00000278267 | less</code></pre>
+<pre class="sh"><code>&gt; zcat gencode.gtf.gz | grep ENSG00000278267
+&gt; zcat gencode.gtf.gz | grep ENSG00000278267 | head 
+&gt; zcat gencode.gtf.gz | grep ENSG00000278267 | less</code></pre>
 </section><section id="output-redirection" class="slide level2">
 <h2><span class="header-section-number">6.2</span> Output redirection</h2>
 <ul>
 <li>Instead of printing the results of a command.</li>
 <li>Use <code>&gt;</code> to redirect it to a file.</li>
 </ul>
-<pre class="sh"><code>&gt; zcat bigFile.gz | grep ENSG00000278267 | head &gt; gene1.gtf</code></pre>
+<pre class="sh"><code>&gt; gunzip -c gencode.gtf.gz &gt; gencode.gtf
+&gt; ls -lh
+&gt; zcat gencode.gtf.gz | grep ENSG00000278267 | head &gt; gene1.gtf</code></pre>
 </section></section>
-<section><section id="whats-next" class="titleslide slide level1"><h1><span class="header-section-number">7</span> What's next ?</h1></section><section id="whats-next-1" class="slide level2">
-<h2><span class="header-section-number">7.1</span> What's next ?</h2>
+<section><section id="to-go-further" class="titleslide slide level1"><h1><span class="header-section-number">7</span> To go further</h1></section><section id="wildcard" class="slide level2">
+<h2><span class="header-section-number">7.1</span> <code>*</code> wildcard</h2>
 <ul>
-<li><code>ssh</code> and <code>scp</code>.</li>
-<li><code>*</code> wildcard.</li>
-<li>Scripting.</li>
-<li>Custom batch profile (<code>.bachrc</code> file).</li>
+<li><code>*</code> represent any possible character sequence.</li>
+<li>Useful to manipulate several files with one command.</li>
 </ul>
+<pre class="sh"><code>&gt; ls
+analysis.sh  graphs.R  results.csv  samp1.bam  samp1.pdf  temp1.log  temp1.txt  temp.txt.gz
+&gt; ls temp*
+temp1.log  temp1.txt  temp.txt.gz
+&gt; rm temp*
+&gt; ls
+analysis.sh  graphs.R  results.csv  samp1.bam  samp1.pdf</code></pre>
+<p><strong>Caution:</strong> <code>rm *</code> removes every files.</p>
+</section><section id="scripts" class="slide level2">
+<h2><span class="header-section-number">7.2</span> Scripts</h2>
+<ul>
+<li>Write commands in a <code>.sh</code> file.</li>
+<li>Run with <code>sh</code>.</li>
+</ul>
+<pre class="sh"><code>&gt; sh myScript.sh</code></pre>
 </section></section>
     </div>
   </div>
