@@ -81,21 +81,6 @@ function cleanMdToSlides() {
   sed --in-place="" 's/##\\#/###/g' ../export/$1-to-slides.md
 }
 
-function buildDeckSlides() {
-
-  downloadLib imakewebthings deck.js
-  downloadLib markahon deck.search.js
-  downloadLib mikeharris100 deck.js-transition-cube
-
-  echo -e "Exporting...                   ../export/$1-deck-slides$2.html"
-
-  pandoc -w dzslides --template $ORIGIN/templates/deck-slides-template$2.html --number-sections --email-obfuscation=none -o ../export/$1-deck-slides$2.html ../export/$1-to-slides.md
-
-  sed --in-place="" s/h1\>/h2\>/g ../export/$1-deck-slides$2.html
-  sed --in-place="" s/\>\<h2/\>\<h1/g ../export/$1-deck-slides$2.html
-  sed --in-place="" s/\\/h2\>\</\\/h1\>\</g ../export/$1-deck-slides$2.html
-}
-
 function buildRevealSlides() {
 
   downloadLib hakimel reveal.js
@@ -122,8 +107,6 @@ function exportMdToSlides() {
     cleanMdToSlides $1
     
     buildRevealSlides $1
-
-    buildRevealSlides $1 -alternative
 
 }
 
