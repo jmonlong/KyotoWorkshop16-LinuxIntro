@@ -223,7 +223,7 @@ workshop
 </section><section id="exercise-1" class="slide level2">
 <h2><span class="header-section-number">3.6</span> Exercise</h2>
 <ol type="1">
-<li>Download the annotation file located at <a href="https://goo.gl/FLGAZH">https://goo.gl/FLGAZH</a>.</li>
+<li>Download the annotation file located at <a href="https://goo.gl/FLGAZH" class="uri">https://goo.gl/FLGAZH</a>.</li>
 <li>Copy the file to the <code>linux</code> folder.</li>
 <li>Remove the file in the root folder.</li>
 <li>Go to the <code>linux</code> folder.</li>
@@ -301,8 +301,18 @@ workshop
 &gt; ls -lh
 &gt; zcat gencode.gtf.gz | grep ENSG00000278267 | head &gt; gene1.gtf</code></pre>
 </section></section>
-<section><section id="to-go-further" class="titleslide slide level1"><h1><span class="header-section-number">7</span> To go further</h1></section><section id="wildcard" class="slide level2">
-<h2><span class="header-section-number">7.1</span> <code>*</code> wildcard</h2>
+<section><section id="extra" class="titleslide slide level1"><h1><span class="header-section-number">7</span> Extra</h1></section><section id="scp-command" class="slide level2">
+<h2><span class="header-section-number">7.1</span> <code>scp</code> command</h2>
+<ul>
+<li>Use SSH.</li>
+<li>Copy a file from a server to your computer.</li>
+<li>Run the command from your computer's terminal, NOT once connected to SSH.</li>
+<li>The address looks like this:</li>
+</ul>
+<p><code>&lt;username&gt;@&lt;server&gt;:&lt;pathToFile&gt;</code></p>
+<pre class="sh"><code>scp jmonlong@www.genome.med.kyoto-u.ac.jp:workshop/linux/gene1.gtf .</code></pre>
+</section><section id="wildcard" class="slide level2">
+<h2><span class="header-section-number">7.2</span> <code>*</code> wildcard</h2>
 <ul>
 <li><code>*</code> represent any possible character sequence.</li>
 <li>Useful to manipulate several files with one command.</li>
@@ -316,7 +326,7 @@ temp1.log  temp1.txt  temp.txt.gz
 analysis.sh  graphs.R  results.csv  samp1.bam  samp1.pdf</code></pre>
 <p><strong>Caution:</strong> <code>rm *</code> removes every files.</p>
 </section><section id="scripts" class="slide level2">
-<h2><span class="header-section-number">7.2</span> Scripts</h2>
+<h2><span class="header-section-number">7.3</span> Scripts</h2>
 <ul>
 <li>Write commands in a <code>.sh</code> file.</li>
 <li>Run with <code>sh</code>.</li>

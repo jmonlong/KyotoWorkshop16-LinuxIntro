@@ -215,7 +215,20 @@ Note: To download the file you can use:
 > zcat gencode.gtf.gz | grep ENSG00000278267 | head > gene1.gtf
 ~~~
 
-# To go further
+# Extra
+
+## `scp` command
+
+- Use SSH.
+- Copy a file from a server to your computer.
+- Run the command from your computer's terminal, NOT once connected to SSH.
+- The address looks like this: 
+
+`<username>@<server>:<pathToFile>`
+
+~~~sh
+scp jmonlong@www.genome.med.kyoto-u.ac.jp:workshop/linux/gene1.gtf .
+~~~
 
 ## `*` wildcard
 

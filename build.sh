@@ -77,8 +77,8 @@ function cleanMdToSlides() {
 
   # replace ### or #### with ##
   # only <h2> is allowed in slides
-  sed --in-place="" 's/###*/##/g' ../export/$1-to-slides.md
-  sed --in-place="" 's/##\\#/###/g' ../export/$1-to-slides.md
+  sed -i "" 's/###*/##/g' ../export/$1-to-slides.md
+  sed -i "" 's/##\\#/###/g' ../export/$1-to-slides.md
 }
 
 function buildDeckSlides() {
@@ -91,9 +91,9 @@ function buildDeckSlides() {
 
   pandoc -w dzslides --template $ORIGIN/templates/deck-slides-template$2.html --number-sections --email-obfuscation=none -o ../export/$1-deck-slides$2.html ../export/$1-to-slides.md
 
-  sed --in-place="" s/h1\>/h2\>/g ../export/$1-deck-slides$2.html
-  sed --in-place="" s/\>\<h2/\>\<h1/g ../export/$1-deck-slides$2.html
-  sed --in-place="" s/\\/h2\>\</\\/h1\>\</g ../export/$1-deck-slides$2.html
+  sed -i "" s/h1\>/h2\>/g ../export/$1-deck-slides$2.html
+  sed -i "" s/\>\<h2/\>\<h1/g ../export/$1-deck-slides$2.html
+  sed -i "" s/\\/h2\>\</\\/h1\>\</g ../export/$1-deck-slides$2.html
 }
 
 function buildRevealSlides() {
@@ -105,9 +105,9 @@ function buildRevealSlides() {
 
   pandoc -w revealjs --template $ORIGIN/templates/reveal-slides-template$2.html --number-sections --email-obfuscation=none -o ../export/$1-reveal-slides$2.html ../export/$1-to-slides.md
 
-  sed  --in-place="" s/h1\>/h2\>/g ../export/$1-reveal-slides$2.html
-  sed  --in-place="" s/\>\<h2/\>\<h1/g ../export/$1-reveal-slides$2.html
-  sed  --in-place="" s/\\/h2\>\</\\/h1\>\</g ../export/$1-reveal-slides$2.html
+  sed  -i "" s/h1\>/h2\>/g ../export/$1-reveal-slides$2.html
+  sed  -i "" s/\>\<h2/\>\<h1/g ../export/$1-reveal-slides$2.html
+  sed  -i "" s/\\/h2\>\</\\/h1\>\</g ../export/$1-reveal-slides$2.html
 }
 
 function buildBeamer() {
