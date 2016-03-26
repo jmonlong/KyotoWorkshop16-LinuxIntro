@@ -4,6 +4,8 @@ This is a practical session from [The 4th Kyoto Course and Symposium on Bioinfor
 
 The content can be found in the form of [slides](http://jmonlong.github.io/KyotoWorkshop16-LinuxIntro/doc/export/LinuxBasic-reveal-slides.html) or [Markdown page](doc/md/LinuxBasic.md).
 
+The commands typed during the practical are also in the [commands.sh](commands.sh) file.
+
 
 ### Acknowledgment
 
