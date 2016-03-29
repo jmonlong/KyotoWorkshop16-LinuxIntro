@@ -33,7 +33,7 @@
 - The address to connect to looks like : `<username>@<server>`
 
 ~~~sh
-> ssh jmonlong@www.genome.med.kyoto-u.ac.jp
+> ssh -p 22 jmonlong@www.genome.med.kyoto-u.ac.jp
 ~~~
 
 **Exercise:** Connect to the server (using your username).
